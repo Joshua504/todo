@@ -17,6 +17,7 @@
   </head>
   <body>
     <section class="almighty-con">
+      <!-- sid-nav -->
       <div class="side-bar">
         <nav>
           <div>
@@ -49,8 +50,9 @@
           </ul>
         </nav>
       </div>
+      <!-- center-page -->
       <div class="center-page">
-        <nav>
+        <nav class="edit-menu">
           <ul>
             <li>edit</li>
             <li>duplicate</li>
@@ -67,15 +69,45 @@
             <button><ion-icon name="add-outline"></ion-icon></button>
           </ul>
         </div>
+        <!-- ------------------------------- pop-up -------------------------------- -->
+        <section class="popup">
+          <div class="exit">
+            <h1><ion-icon name="close-circle-outline"></ion-icon></h1>
+          </div>
+          <form action="">
+            <input type="text" placeholder="Task Name" />
+            <div>
+              <button class="add-task">add task</button>
+            </div>
+          </form>
+        </section>
+        <!-- ------------------------------ task-list ------------------------------ -->
+        <section class="content-box">
+          <div class="content-item">
+            <div>
+              <input class="checkbox" type="checkbox" />
+            </div>
+            <div class="text"><p>setup meeting by night</p></div>
+            <div><p>12 : 30pm</p></div>
+            <select id="dropdown">
+              <option value="option1">active</option>
+              <option value="option2">progress</option>
+              <option value="option3">done</option>
+            </select>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>            
+          </div>
+        </section>
       </div>
+
+      <!-- right side bar -->
       <div>
         <nav>
           <div>
             <span><ion-icon name="notifications-outline"></ion-icon></span>
           </div>
-          <div>
-
-          </div>
+          <div></div>
         </nav>
       </div>
     </section>
