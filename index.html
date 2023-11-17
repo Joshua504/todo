@@ -66,7 +66,9 @@
         <div>
           <ul class="task-list">
             <li>tasks</li>
-            <button><ion-icon name="add-outline"></ion-icon></button>
+            <button class="show-popup">
+              <ion-icon name="add-outline"></ion-icon>
+            </button>
           </ul>
         </div>
         <!-- ------------------------------- pop-up -------------------------------- -->
@@ -74,31 +76,15 @@
           <div class="exit">
             <h1><ion-icon name="close-circle-outline"></ion-icon></h1>
           </div>
-          <form action="">
-            <input type="text" placeholder="Task Name" />
+          <div class="form">
+            <input class="input" type="text" placeholder="Task Name" />
             <div>
               <button class="add-task">add task</button>
             </div>
-          </form>
-        </section>
-        <!-- ------------------------------ task-list ------------------------------ -->
-        <section class="content-box">
-          <div class="content-item">
-            <div>
-              <input class="checkbox" type="checkbox" />
-            </div>
-            <div class="text"><p>setup meeting by night</p></div>
-            <div><p>12 : 30pm</p></div>
-            <select id="dropdown">
-              <option value="option1">active</option>
-              <option value="option2">progress</option>
-              <option value="option3">done</option>
-            </select>
-            <div class="progress-bar">
-              <div class="progress"></div>
-            </div>
           </div>
         </section>
+        <!-- ------------------------------ task-list ------------------------------ -->
+        <section class="content-box"></section>
       </div>
 
       <!-- right side bar -->
