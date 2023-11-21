@@ -49,13 +49,17 @@
   margin-left: 5.8em;
   background: #f3f6fd;
   width: 62%;
-  height: 100vh;
+  height: 100dvh;
   padding: 2em 2em 2em 4em;
   position: relative;
 }
 .edit-menu {
   margin-bottom: 1em;
-  display: none;
+  /* visibility: hidden; */
+}
+.show-edit{
+  /* visibility: visible; */
+  color: #e96173;
 }
 .center-page nav > ul {
   display: flex;
@@ -181,11 +185,11 @@
 .content-box .content-item:hover {
   background: #fff;
 }
-.content-box .content-item .checkbox {
+/* .content-box .content-item .checkbox {
   webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
+} */
 .checkbox {
   width: 2.5em;
   height: 2.5em;

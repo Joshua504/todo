@@ -22,8 +22,6 @@ const valueContainer = [];
 
 addTaskEl.addEventListener("click", () => {
   const value = inputEl.value;
-  valueContainer.push(value);
-
   const contentItem = ` 
 <div class="content-item">
 <div>
@@ -41,12 +39,25 @@ addTaskEl.addEventListener("click", () => {
 </div>
 </div>
 `;
-
   if(value === ''){
     popup.classList.remove("display-pop");
   }else{
     contentBox.innerHTML += contentItem;
+    valueContainer.push(contentItem);
+    localStorage.setItem('tasks', JSON.stringify(valueContainer));
     inputEl.value = ''
     popup.classList.remove("display-pop");
+    const storedArray = JSON.parse(localStorage.getItem('tasks'));
   }
 });
+/* -------------------------------- save-todo ------------------------------- */
+/* ------------------------------- handle edit ------------------------------ */
+// const checkBox = document.querySelectorAll(".checkbox");
+// console.log('checkBox: ', checkBox);
+
+// checkBox.forEach((item) => {  
+//   if (item.checked){
+//     console.log(item);
+//     document.querySelector('.edit-menu').classList.add = 'show-edit';
+//   }
+// })
