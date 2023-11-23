@@ -18,10 +18,13 @@ const currentTime = new Date();
 const hours = currentTime.getHours();
 const minutes = currentTime.getMinutes();
 
-const valueContainer = [];
+const stored = JSON.parse(localStorage.getItem('myArray'));
+const valueContainer = stored && stored.length > 0? stored : [];
+
 
 addTaskEl.addEventListener("click", () => {
   const value = inputEl.value;
+
   const contentItem = ` 
 <div class="content-item">
 <div>
@@ -39,17 +42,36 @@ addTaskEl.addEventListener("click", () => {
 </div>
 </div>
 `;
+
   if(value === ''){
     popup.classList.remove("display-pop");
   }else{
     contentBox.innerHTML += contentItem;
     valueContainer.push(contentItem);
-    localStorage.setItem('tasks', JSON.stringify(valueContainer));
+    console.log('valueContainer: ', valueContainer);
+    localStorage.setItem('myArray', JSON.stringify(valueContainer));
     inputEl.value = ''
     popup.classList.remove("display-pop");
-    const storedArray = JSON.parse(localStorage.getItem('tasks'));
   }
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+
+  let storedArray = JSON.parse(localStorage.getItem('myArray'));
+  if(storedArray) {
+    displayArray(storedArray); 
+  }
+})
+
+function displayArray(arry) {
+
+  arry.forEach(item => {
+      contentBox.innerHTML += item;
+  });
+  // for (let i = 0; i < arry.length; i++) {
+  // }
+}
+
 /* -------------------------------- save-todo ------------------------------- */
 /* ------------------------------- handle edit ------------------------------ */
 // const checkBox = document.querySelectorAll(".checkbox");
