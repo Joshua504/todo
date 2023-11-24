@@ -1,6 +1,7 @@
 const showPopup = document.querySelector(".show-popup");
 const exitPopup = document.querySelector(".exit");
 const popup = document.querySelector(".popup");
+const checkBox = document.getElementById("chess");
 
 showPopup.addEventListener("click", () => {
   popup.classList.add("display-pop");
@@ -28,7 +29,7 @@ addTaskEl.addEventListener("click", () => {
   const contentItem = ` 
 <div class="content-item">
 <div>
-  <input class="checkbox" type="checkbox" />
+  <input class="checkbox" id="chess" type="checkbox" />
 </div>
 <div class="text"><p>${value}</p></div>
 <div><p>${hours} : ${minutes}</p></div>
@@ -68,18 +69,21 @@ function displayArray(arry) {
   arry.forEach(item => {
       contentBox.innerHTML += item;
   });
-  // for (let i = 0; i < arry.length; i++) {
-  // }
 }
 
 /* -------------------------------- save-todo ------------------------------- */
 /* ------------------------------- handle edit ------------------------------ */
-// const checkBox = document.querySelectorAll(".checkbox");
-// console.log('checkBox: ', checkBox);
 
-// checkBox.forEach((item) => {  
-//   if (item.checked){
-//     console.log(item);
-//     document.querySelector('.edit-menu').classList.add = 'show-edit';
-//   }
-// })
+
+function toggleElement() {
+  console.log('checkBox: ', checkBox);
+  const editMenu = document.querySelector(".edit-menu");
+  console.log('editMenu: ', editMenu);
+
+  if(checkBox.checked) {
+    editMenu.style.display = "block";
+  } else {
+    editMenu.style.display = "none"; 
+  }
+}
+toggleElement()

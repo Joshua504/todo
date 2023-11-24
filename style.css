@@ -55,11 +55,6 @@
 }
 .edit-menu {
   margin-bottom: 1em;
-  /* visibility: hidden; */
-}
-.show-edit{
-  /* visibility: visible; */
-  color: #e96173;
 }
 .center-page nav > ul {
   display: flex;
@@ -425,6 +420,9 @@ footer {
   .popup {
     height: 30%;
     width: 90%;
+  }
+  .exit{
+    margin-bottom: .8em;
   }
   .progress-bar {
     display: none;
