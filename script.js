@@ -1,7 +1,6 @@
 const showPopup = document.querySelector(".show-popup");
 const exitPopup = document.querySelector(".exit");
 const popup = document.querySelector(".popup");
-const checkBox = document.getElementById("chess");
 
 showPopup.addEventListener("click", () => {
   popup.classList.add("display-pop");
@@ -33,7 +32,7 @@ addTaskEl.addEventListener("click", () => {
 </div>
 <div class="text"><p>${value}</p></div>
 <div><p>${hours} : ${minutes}</p></div>
-<select id="dropdown">
+<select id="dropdown" class="drop">
   <option value="option1">active</option>
   <option value="option2">progress</option>
   <option value="option3">done</option>
@@ -56,6 +55,22 @@ addTaskEl.addEventListener("click", () => {
   }
 });
 
+// const dropDown = document.querySelector(".drop");
+// const prog = document.querySelector(".progress");
+// console.log('dropDown: ', dropDown);
+
+// if(dropDown.textContent.includes('active')){
+//   prog.style.width = "20%"
+//   prog.style.backgroundColor = "#AA4A44";
+// }else if(dropDown.textContent.includes('progress')){
+//   prog.style.width = "50%"
+//   prog.style.backgroundColor = "#FFA500";
+// }else{
+//   prog.style.width = "100%"
+//   prog.style.backgroundColor = "#4caf50";
+// }
+
+
 window.addEventListener("DOMContentLoaded", () => {
 
   let storedArray = JSON.parse(localStorage.getItem('myArray'));
@@ -70,20 +85,18 @@ function displayArray(arry) {
       contentBox.innerHTML += item;
   });
 }
-
-/* -------------------------------- save-todo ------------------------------- */
 /* ------------------------------- handle edit ------------------------------ */
 
 
-function toggleElement() {
-  console.log('checkBox: ', checkBox);
-  const editMenu = document.querySelector(".edit-menu");
-  console.log('editMenu: ', editMenu);
+// function toggleElement() {
+//   console.log('checkBox: ', chess);
+//   const editMenu = document.querySelector(".edit-menu");
+//   console.log('editMenu: ', editMenu);
 
-  if(checkBox.checked) {
-    editMenu.style.display = "block";
-  } else {
-    editMenu.style.display = "none"; 
-  }
-}
-toggleElement()
+//   if(checkBox.checked) {
+//     editMenu.style.display = "block";
+//   } else {
+//     editMenu.style.display = "none"; 
+//   }
+// }
+// toggleElement()
