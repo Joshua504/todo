@@ -55,9 +55,9 @@ addTaskEl.addEventListener("click", () => {
   }
 });
 
-// const dropDown = document.querySelector(".drop");
-// const prog = document.querySelector(".progress");
-// console.log('dropDown: ', dropDown);
+const dropdown = document.getElementById('dropdown');
+const prog = document.querySelector(".progress");
+console.log('dropDown: ', dropdown);
 
 // if(dropDown.textContent.includes('active')){
 //   prog.style.width = "20%"

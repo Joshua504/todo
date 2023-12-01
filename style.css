@@ -96,8 +96,29 @@
   font-size: 1.3rem;
   text-transform: capitalize;
 }
-.task-list > button {
+.task-list > div > .show-popup {
   background: #674c81;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 50px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.task-list > div > .clear-all{
+  background: #AA4A44;
   display: flex;
   justify-content: center;
   align-items: center;
