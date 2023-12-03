@@ -2,12 +2,24 @@ const showPopup = document.querySelector(".show-popup");
 const exitPopup = document.querySelector(".exit");
 const popup = document.querySelector(".popup");
 
+/* ------------------------------- show pop up ------------------------------ */
 showPopup.addEventListener("click", () => {
   popup.classList.add("display-pop");
 });
 exitPopup.addEventListener("click", () => {
   popup.classList.remove("display-pop");
 });
+
+/* ---------------------------- clear all content --------------------------- */
+
+const clearAll = document.querySelector(".clear-all");
+
+clearAll.addEventListener("click", () => {
+  localStorage.clear()
+  contentBox.innerHTML = "";
+})
+
+/* ------------------------- display and add content ------------------------ */
 
 const inputEl = document.querySelector(".input");
 const addTaskEl = document.querySelector(".add-task");
@@ -57,7 +69,8 @@ addTaskEl.addEventListener("click", () => {
 
 const dropdown = document.getElementById('dropdown');
 const prog = document.querySelector(".progress");
-console.log('dropDown: ', dropdown);
+console.log('prog : ', prog );
+// console.log('dropDown: ', dropdown);
 
 // if(dropDown.textContent.includes('active')){
 //   prog.style.width = "20%"
@@ -70,6 +83,7 @@ console.log('dropDown: ', dropdown);
 //   prog.style.backgroundColor = "#4caf50";
 // }
 
+/* ------------------------- getting stored contents ------------------------ */
 
 window.addEventListener("DOMContentLoaded", () => {
 
