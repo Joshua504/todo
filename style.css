@@ -282,14 +282,14 @@ option:last-child {
   animation: progress 2s ease-in-out forwards;
 }
 
-@keyframes progress {
+/* @keyframes progress {
   from {
     width: 0;
   }
   to {
     width: 20%;
   }
-}
+} */
 
 /* -------------------------------- right-bar ------------------------------- */
 .rightbar {
