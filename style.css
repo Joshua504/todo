@@ -67,12 +67,12 @@
   text-transform: capitalize;
   cursor: pointer;
 }
-.center-page nav > ul > li:hover {
+/* .center-page nav > ul > li:hover {
   background: #fff;
   color: #85888d;
   padding: 5px;
   border-radius: 5px;
-}
+} */
 .sub-menu {
   display: flex;
   gap: 3em;

@@ -16,8 +16,6 @@ const inputEl = document.querySelector(".input");
 const addTaskEl = document.querySelector(".add-task");
 const contentBox = document.querySelector(".content-box");
 const editMenu = document.querySelector(".edit-menu");
-// console.log('editMenu: ', editMenu);
-
 
 const currentTime = new Date();
 
@@ -55,18 +53,17 @@ addTaskEl.addEventListener("click", () => {
     inputEl.value = "";
     popup.classList.remove("display-pop");
   }
-
-  // const editMenu = document.querySelector(".edit-menu");
-  const checkBox = document.querySelector(".checkbox");
-  function toggleElement() {
-
-    if (checkBox.checked) {
-      editMenu.style.display = "block";
-    } else {
-      editMenu.style.display = "none";
-    }
+  /* ---------------------------- showing editmenu ---------------------------- */
+  function isChecked(checkbox) {
+    return checkbox.checked;
   }
-  toggleElement();
+  const checkBox = document.querySelector(".checkbox");
+
+  if (isChecked(checkbox)) {
+    console.log("Checkbox is checked");
+  } else {
+    console.log("Checkbox is not checked");
+  }
 });
 
 // if(dropDown.textContent.includes('active')){
